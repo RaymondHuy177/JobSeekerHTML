@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .form-horizontal .control-label{
+      text-align:left;
+    }
+
+    fieldset.gender{
+        border: 1px groove #ddd !important;
+        padding: 0 1em 1em 1em !important;
+        margin: 0 0 0 0 !important;
+        -webkit-box-shadow:  0px 0px 0px 0px #000;
+        box-shadow:  0px 0px 0px 0px #000;
+    }
+    legend{
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Modal Example</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Register</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Seeker Register</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label for="user" class="col-sm-5 control-label">
+                        Tên đăng nhập (*)</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="user"/>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputpassword" class="col-sm-5 control-label">
+                        Mật khẩu (*)</label>
+                    <div class="col-sm-7">
+                        <input type="password" class="form-control" id="inputpassword"/>
+                    </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-sm-6">
+              <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label for="confirmpassword" class="col-sm-4 control-label">
+                        Xác nhận MK (*)</label>
+                    <div class="col-sm-7">
+                        <input type="password" class="form-control" id="confirmpassword"/>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label for="name" class="col-sm-5 control-label">
+                        Họ tên (*)</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="name"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthday" class="col-sm-5 control-label">
+                        Ngày sinh (*)</label>
+                    <div class="col-sm-7">
+                        <input type="date" class="form-control" id="birthday"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="hkthuongtru" class="col-sm-5 control-label">
+                        Hộ khẩu thường trú (*)</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="hkthuongtru"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="hktamtru" class="col-sm-5 control-label">
+                        Hộ khẩu tạm trú (*)</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="hktamtru"/>
+                    </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-sm-5">
+              <form role="form" class="form-horizontal">
+                <div class="form-group">
+					<fieldset class="gender col-sm-4">
+					  <legend class="gender"><b>Giới tính (*)<b></legend>
+					  <div class="control-group">
+						  <label class="control-label input-label" for="male">
+							<input type="radio" name="gender" id="male" value="male">
+							Nam
+						  </label>
+						  <br>
+						  <label class="control-label input-label" for="female">
+							<input type="radio" name="gender" id="female" value="female">
+							Nữ
+						  </label>
+					  </div>
+					</fieldset>                
+				</div>
+              </form>
+            </div>
+          </div>
+		  <div class="">
+			<fieldset class="gender">
+			<legend class="gender"><b>Bắt buộc điền 1 trong 2 bảng (*)<b></legend>
+				<div class="col-sm-6">
+					<div class="col-sm-12">
+						<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<fieldset class="gender">
+								  <legend class="gender"><b>CMND<b></legend>
+								  <div class="form-group">
+										<label for="cmnd" class="col-sm-4 control-label">
+											CMND</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" id="cmnd"/>
+										</div>
+								  </div>
+								  <div class="form-group">
+										<label for="ngaycap" class="col-sm-4 control-label">
+											Ngày cấp</label>
+										<div class="col-sm-8">
+											<input type="date" class="form-control" id="ngaycap"/>
+										</div>
+								  </div>
+								  <div class="form-group">
+										<label for="noicap" class="col-sm-4 control-label">
+											Nơi cấp</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" id="noicap"/>
+										</div>
+								  </div>
+								</fieldset>                
+							</div>
+						</form>
+					</div>
+				</div>	  
+				<div class="col-sm-6">
+					<div class="col-sm-12">
+						<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<fieldset class="gender">
+								  <legend class="gender"><b>Passport<b></legend>
+								  <div class="form-group">
+										<label for="passport" class="col-sm-4 control-label">
+											CMND</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" id="passport"/>
+										</div>
+								  </div>
+								  <div class="form-group">
+										<label for="ngaycap2" class="col-sm-4 control-label">
+											Ngày cấp</label>
+										<div class="col-sm-8">
+											<input type="date" class="form-control" id="ngaycap2"/>
+										</div>
+								  </div>
+								  <div class="form-group">
+										<label for="ngayhethan" class="col-sm-4 control-label">
+											Ngày hết hạn</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" id="ngayhethan"/>
+										</div>
+								  </div>
+								</fieldset>               
+							</div>
+						</form>
+					</div>
+				</div>	  	  
+			</fieldset> 
+        </div>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<form role="form" class="form-horizontal">
+					<div class="form-group">
+						<label for="job" class="col-sm-5 control-label">
+							Nghề nghiệp (*)</label>
+						<div class="col-sm-7">
+							<Select class="form-control" id="job"/>
+								<option>Sinh viên</option>
+								<option>Thất nghiệp</option>
+							</Select>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-6">
+				<form role="form" class="form-horizontal">
+					<div class="form-group">
+						<label for="degree" class="col-sm-5 control-label">
+							Trình độ học vấn (*)</label>
+						<div class="col-sm-7">
+							<input type="text" class="form-control" id="degree"/>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-6">
+				<form role="form" class="form-horizontal">
+					<div class="form-group">
+						<label for="phone" class="col-sm-5 control-label">
+							Số điện thoại (*)</label>
+						<div class="col-sm-7">
+							<input type="text" class="form-control" id="phone"/>
+							<br>
+							<button type="button" class="btn btn-default form-control" id="confirmphone"/> Gửi mã xác nhận
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-6">
+				<form role="form" class="form-horizontal">
+					<div class="form-group">
+						<label for="email" class="col-sm-5 control-label">
+							Email (*)</label>
+						<div class="col-sm-7">
+							<input type="email" class="form-control" id="email"/>
+							<br>
+							<button type="button" class="btn btn-default form-control" id="confirmemail"/> Gửi mã xác nhận
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<form role="form" class="form-horizontal">
+					<div class="form-group">
+						<label for="confirmcode" class="col-sm-5 control-label">
+							Mã xác nhận (*)</label>
+						<div class="col-sm-7">
+							<input type="text" class="form-control" id="confirmcode" placeholder="Mã xác nhận từ sms/email"/>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Register</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>
+
